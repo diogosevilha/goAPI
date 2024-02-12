@@ -1,8 +1,6 @@
 package main
 
 import (
-	"fmt"
-
 	"github.com/diogosevilha/goLangProjects/config"
 	"github.com/diogosevilha/goLangProjects/router"
 )
@@ -17,7 +15,7 @@ func main() {
 	// Initialize Configs
 	err := config.Init()
 	if err != nil {
-		fmt.Println(err)
+		logger.Errorf("config initialization error: %v", err)
 		return
 	}
 
